@@ -1,14 +1,25 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 import Filter from './components/Filter'
 import PersonForm from './components/PersonForm'
 import People from './components/People'
 
-const App = (props) => {
-  const [people, setPerson] = useState(props.people)
+const App = () => {
+  const [people, setPerson] = useState([])
   const [newName, setNewName] = useState('')
   const [newNumber, setNewNumber] = useState('')
   const [newSearch, setNewSearch] = useState('')
+
+  useEffect(() => {
+    console.log('effect')
+    axios
+      .get('http://localhost:3001/persons')
+      .then(response => {
+        console.log('promise fulfilled')
+        setPerson(response.data)
+      })
+  }, [])
 
   const handleNameChange = (event) => {
     console.log(event.target.value)
