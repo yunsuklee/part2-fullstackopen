@@ -21,14 +21,24 @@
       "id": 4
     },
     {
-      "name": "coral neira",
+      "name": "Coral Neira",
       "number": "641878007",
       "id": 6
     },
     {
-      "name": "sergio lee",
+      "name": "Sergio Lee",
       "number": "2966211293",
       "id": 5
+    },
+    {
+      "name": "Monica Oh",
+      "number": "1537942597",
+      "id": 7
+    },
+    {
+      "name": "Vicky Lee",
+      "number": "123456789",
+      "id": 8
     }
   ]
 }
